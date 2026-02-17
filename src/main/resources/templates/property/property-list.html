@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listings</title>
+    <link rel="stylesheet" href="/css/property-list.css">
+</head>
+<body>
+    <header>
+        <h1>Property Listings</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/properties">Properties</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+            </ul>
+        </nav>
+        <a href="/property/add" class="button">Add New Property</a> 
+    </header>
+
+    <main>
+        <section class="property-list">
+            <ul>
+                <li th:each="property : ${properties}" class="property-item">
+                    <a th:href="@{/properties/{id}(id=${property.id})}" class="property-link">
+                        <div class="property-image">
+                           <img th:src="@{{imageUrl}(imageUrl=${property.imageUrl})}" alt="Property Image">
+
+                        </div>
+                        <div class="property-info">
+                            <h2 th:text="${property.name}"></h2>
+                            <p>Price: $<span th:text="${property.price}"></span></p>
+                            <p th:text="${property.description}"></p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Real Estate Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

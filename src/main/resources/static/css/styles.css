@@ -1,0 +1,96 @@
+/* Reset some default styling */
+body, h1, p, a, form, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e0f7fa; /* Light blue background */
+    color: #333; /* Default text color */
+}
+
+header {
+    background: #00796b; /* Darker blue-green background */
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff; /* White background for main content area */
+    border-radius: 8px; /* Rounded corners for the main content area */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+form {
+    margin-top: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #00796b; /* Darker blue-green button background */
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #004d40; /* Even darker blue-green on hover */
+}
+
+p {
+    color: #d32f2f; /* Red color for error messages */
+    margin-top: 1rem;
+}
+
+a {
+    color: #00796b; /* Darker blue-green for links */
+}
+
+a:hover {
+    text-decoration: underline;
+}

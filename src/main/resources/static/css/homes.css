@@ -1,0 +1,223 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef1f5;
+    color: #444;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #f8b400;
+    color: #333;
+}
+
+/* Hero Section with Parallax Effect */
+.hero {
+    position: relative;
+    height: 600px;
+    background: url('/images/hero2.jpg') center/cover fixed no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.cta-button {
+    background-color: #f8b400;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e69a00;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+}
+
+.featured-properties {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.featured-properties h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.property-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.property-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-card h3 {
+    margin: 15px;
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 600;
+}
+
+.property-card .btn {
+    display: block;
+    background-color: #f8b400;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+.property-card .btn:hover {
+    background-color: #e69a00;
+}
+
+.view-all {
+    display: inline-block;
+    margin-top: 20px;
+    color: #f8b400;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.view-all:hover {
+    color: #e69a00;
+}
+
+/* About Us & Contact Us */
+.about-us,
+.contact-us {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.about-us h2,
+.contact-us h2 {
+    font-size: 2.5em;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-us p,
+.contact-us p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-us a.learn-more,
+.contact-us a.contact-link {
+    color: #f8b400;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.about-us a.learn-more:hover,
+.contact-us a.contact-link:hover {
+    color: #e69a00;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}

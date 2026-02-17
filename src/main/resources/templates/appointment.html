@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="stylesheet" type="text/css" href="/css/io.css">
+</head>
+<body>
+    <header>
+        <h1>Appointment</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/properties">Properties</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/saveAppointment" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <br>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            <br>
+
+            <label for="mobileno">Mobile No:</label>
+            <input type="text" id="mobileno" name="mobileno" required>
+            <br>
+
+            <select id="propertyId" name="propertyId">
+    <option value="">Select Property</option>
+    <th:block th:each="property : ${properties}">
+        <option th:value="${property.id}" th:text="${property.name}"></option>
+    </th:block>
+</select>
+
+            <br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

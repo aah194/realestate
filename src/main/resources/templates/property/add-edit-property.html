@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Edit Property</title>
+    <link rel="stylesheet" type="text/css" href="/css/add-edit-property.css">
+</head>
+<body>
+    <header>
+        <h1>Property Listings</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/properties">Properties</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+            </ul>
+        </nav>
+        <a th:href="${property.id == null ? '/property/add' : '/property/{id}/edit(id=${property.id})'}" 
+           class="button">
+           <span th:text="${property.id == null ? 'Add New Property' : 'Edit Property'}"></span>
+        </a>
+    </header>
+
+    <!-- Back Button -->
+    <a th:href="${property.id == null ? '/properties' : '/properties'}" class="btn-back">
+        Back
+    </a>
+
+    <h1 th:text="${property.id == null ? 'Add Property' : 'Edit Property'}"></h1>
+    
+    <form action="/property/save" method="post">
+        <input type="hidden" id="action" name="action" th:value="${property.id == null ? 'add' : 'edit'}">
+        <input type="hidden" id="id" name="id" th:value="${property.id}">
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" th:value="${property.name}" required>
+        <br>
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" th:value="${property.location}" required>
+        <br>
+        
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" th:value="${property.price}" step="0.01" required>
+        <br>
+        
+        <label for="bedrooms">Bedrooms:</label>
+        <input type="number" id="bedrooms" name="bedrooms" th:value="${property.bedrooms}" required>
+        <br>
+        
+        <label for="bathrooms">Bathrooms:</label>
+        <input type="number" id="bathrooms" name="bathrooms" th:value="${property.bathrooms}" required>
+        <br>
+        
+        <label for="sizeSqFt">Size (Sq Ft):</label>
+        <input type="number" id="sizeSqFt" name="sizeSqFt" th:value="${property.sizeSqFt}" step="0.01" required>
+        <br>
+        
+        <label for="propertyType">Property Type:</label>
+        <input type="text" id="propertyType" name="propertyType" th:value="${property.propertyType}" required>
+        <br>
+        
+        <label for="amenities">Amenities:</label>
+        <input type="text" id="amenities" name="amenities" th:value="${property.amenities}">
+        <br>
+        
+        <label for="imageUrl">Image URL:</label>
+        <input type="url" id="imageUrl" name="imageUrl" th:value="${property.imageUrl}">
+        <br>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" th:text="${property.description}"></textarea>
+        <br>
+        
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

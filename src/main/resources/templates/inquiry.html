@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry</title>
+    <link rel="stylesheet" type="text/css" href="/css/io.css">
+</head>
+<body>
+    <header>
+        <h1>Inquiry</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/properties">Properties</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/saveInquiry" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+
+            <label for="mobileno">Mobile No:</label>
+            <input type="text" id="mobileno" name="mobileno" required>
+            <br>
+
+            <label for="propertyId">Property:</label>
+            <select id="propertyId" name="propertyId">
+                <option value="">Select Property</option>
+                <option value="1">Modern Apartment</option>
+                <option value="2">Luxury Villa</option>
+                <option value="3">Cozy Cottage</option>
+                <option value="4">Beachfront Condo</option>
+                <option value="5">Suburban House</option>
+                <option value="6">Penthouse Suite</option>
+                <option value="104">Modern Loft</option>
+                <option value="105">Country House</option>
+                <option value="106">Exquisite Penthouse</option>
+            </select>
+            <br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

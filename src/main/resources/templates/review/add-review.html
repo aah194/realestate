@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Review</title>
+    <link rel="stylesheet" href="/css/reviews.css">
+</head>
+<body>
+    <header>
+        <h1>Add Review</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/properties">Properties</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form action="/reviews/add" method="post">
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required>
+        <br>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" required></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/reviews">Back</a>
+    <footer>
+        <p>&copy; 2024 Real Estate Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

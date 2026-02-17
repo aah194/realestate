@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="stylesheet" type="text/css" href="/css/property-details.css">
+</head>
+<body>
+    <header>
+        <h1 th:text="${property.name}"></h1>
+        <a th:href="@{/property/edit/{id}(id=${property.id})}">Edit</a> 
+    </header>
+    
+    <section class="property-details">
+        <div class="property-image">
+            <img th:src="@{/{imageUrl}(imageUrl=${property.imageUrl})}" alt="Property Image">
+        </div>
+        
+        <div class="property-info">
+            <p><strong>Location:</strong> <span th:text="${property.location}"></span></p>
+            <p><strong>Price:</strong> $<span th:text="${property.price}"></span></p>
+            <p><strong>Description:</strong> <span th:text="${property.description}"></span></p>
+            <p><strong>Bedrooms:</strong> <span th:text="${property.bedrooms}"></span></p>
+            <p><strong>Bathrooms:</strong> <span th:text="${property.bathrooms}"></span></p>
+            <p><strong>Size:</strong> <span th:text="${property.sizeSqFt}"></span> sq ft</p>
+            <p><strong>Type:</strong> <span th:text="${property.propertyType}"></span></p>
+            <p><strong>Amenities:</strong> <span th:text="${property.amenities}"></span></p>
+        </div>
+        
+        <a href="/properties" class="btn-back">Back to Listings</a>
+        <a href="/appointment" class="btn-back">Make a Appointment</a>
+        <a href="/inquiry" class="btn-back">inquiry</a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Real Estate Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

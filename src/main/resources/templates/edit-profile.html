@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Edit Your Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/properties">Properties</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>                
+                <li><a href="/reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/edit-profile" method="post">
+            <input type="hidden" name="oldUsername" th:value="${user.username}">
+
+            <label for="newUsername">New Username:</label>
+            <input type="text" id="newUsername" name="newUsername" th:value="${user.username}" required>
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+
+            <button type="submit">Update Profile</button>
+        </form>
+        <p th:text="${error}"></p>
+    </main>
+</body>
+</html>
